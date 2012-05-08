@@ -1,34 +1,64 @@
+RIM-COD-URL-14: AirCrew-14.cod
+RIM-COD-SHA1-4: ac 03 01 8f 65 01 f8 5f 35 e5 27 7b a2 8c d6 af 90 8f 56 b1
+RIM-COD-URL-13: AirCrew-13.cod
+RIM-COD-SHA1-3: 74 6e 82 a9 c4 9d f9 2e 1d 85 26 df 15 9a ba c0 a1 54 93 6b
+RIM-COD-URL-12: AirCrew-12.cod
+RIM-COD-SHA1-2: e0 0d 25 ac 7f a0 00 3a 75 f8 02 c2 90 92 08 17 1c 50 44 7c
+RIM-COD-URL-11: AirCrew-11.cod
+RIM-COD-SHA1-1: 5e be d2 a8 a7 6d 3a 35 f1 f9 48 b5 02 ce 6a c4 17 18 1f 35
+RIM-COD-URL-10: AirCrew-10.cod
+RIM-MIDlet-Flags-1: 0
+MIDlet-Jar-Size: 1584690
+MIDlet-Name: AirCrew
+MIDlet-Jar-URL: AirCrew.jar
+MicroEdition-Configuration: CLDC-1.1
+RIM-COD-URL-9: AirCrew-9.cod
+RIM-COD-URL-8: AirCrew-8.cod
+RIM-COD-URL-7: AirCrew-7.cod
+RIM-COD-Module-Dependencies: net_rim_cldc
+RIM-COD-URL-6: AirCrew-6.cod
+RIM-COD-URL-5: AirCrew-5.cod
+RIM-COD-URL-4: AirCrew-4.cod
+RIM-COD-URL-3: AirCrew-3.cod
+RIM-COD-URL-2: AirCrew-2.cod
+RIM-COD-URL-1: AirCrew-1.cod
+RIM-COD-Size-9: 54772
+RIM-COD-Size-8: 39896
+RIM-COD-Size-7: 50324
+RIM-COD-Size-6: 50556
+RIM-COD-Size-5: 56088
+RIM-COD-Size-4: 58020
+RIM-COD-Size-3: 50308
+RIM-COD-Module-Name: AirCrew
+RIM-COD-Size-2: 56616
+RIM-COD-Size-1: 60396
+RIM-COD-SHA1: ef 82 52 38 ba 97 39 a3 25 5e 60 5f 89 1a df c2 1c 1f 89 87
+RIM-COD-Size: 30836
+RIM-COD-Size-16: 62928
+RIM-COD-Size-15: 55612
+RIM-COD-Size-14: 50352
+MicroEdition-Profile: MIDP-2.0
+RIM-COD-Size-13: 52356
+RIM-COD-Size-12: 50296
+RIM-COD-Size-11: 53852
+RIM-COD-Size-10: 51464
+MIDlet-Vendor: BlackBerry Developer
+MIDlet-1: ,,
+RIM-COD-SHA1-16: 86 e5 1f 5b 70 01 b3 76 ad fb ac d7 87 e3 6f 64 e7 4b 5a 07
+RIM-COD-SHA1-15: 95 96 d4 0d c6 fd 89 0a ca c5 8e 28 dc c1 03 18 07 d7 09 b5
+RIM-COD-SHA1-14: 59 00 62 5b cf 11 3a e6 3b 12 ac 79 fb 9e 20 58 7f dd ee 78
+RIM-COD-URL: AirCrew.cod
+RIM-COD-SHA1-13: f2 c4 6d e8 b6 fa aa bb 07 dc 06 4b 4b 6b da 85 9a 15 b6 96
+RIM-COD-SHA1-12: d8 19 86 18 58 38 af e1 76 b5 14 cf 72 98 09 35 9b 06 c5 b1
+RIM-COD-SHA1-11: f5 5b 23 9a 36 aa 99 be c2 cb 4d da 60 98 ab 77 4b 35 61 52
+RIM-COD-SHA1-10: a6 46 ea 7d 03 be 53 84 10 35 1f 36 07 c5 a4 e0 08 a9 65 38
 Manifest-Version: 1.0
 MIDlet-Version: 1.0.0
-RIM-COD-URL-6: AirCrew-6.cod
-MIDlet-Jar-Size: 590215
-RIM-COD-SHA1-6: 39 99 13 70 b5 51 f3 be 83 b9 17 55 b2 d1 ec ea ac 01 88 b7
-RIM-COD-URL-5: AirCrew-5.cod
-RIM-COD-SHA1-5: 90 fb a0 92 b9 03 0b 92 44 af 73 b2 bd 58 4b 55 52 a5 ea 21
-RIM-COD-URL-4: AirCrew-4.cod
-RIM-COD-SHA1-4: f0 26 bf c8 4d ac da 48 74 76 6f c3 d0 e3 7e bf 23 80 6e 8e
-RIM-COD-URL-3: AirCrew-3.cod
-RIM-COD-Size-6: 34700
-RIM-COD-SHA1-3: c6 3d 58 e0 3b de db 1d 95 13 9a fe 59 b7 58 2e ee 89 81 7c
-RIM-COD-URL-2: AirCrew-2.cod
-MicroEdition-Configuration: CLDC-1.1
-MIDlet-Jar-URL: AirCrew.jar
-RIM-COD-Module-Dependencies: net_rim_cldc
-RIM-COD-Size-5: 50216
-RIM-COD-SHA1-2: 5e f4 be 16 08 ab a9 bb 2f ef 6f ea d0 15 90 54 8c 55 4d e2
-RIM-COD-URL-1: AirCrew-1.cod
-RIM-COD-Size-4: 52228
-RIM-COD-SHA1-1: f0 d0 a0 4e d3 1b 55 14 b9 e8 c6 5b 57 a8 46 f7 54 3e 7b 5b
-RIM-COD-Size-3: 56188
-RIM-COD-Size-2: 54772
-RIM-MIDlet-Flags-1: 0
-RIM-COD-Size-1: 54900
-RIM-COD-Module-Name: AirCrew
-MIDlet-Name: AirCrew
-RIM-COD-Size: 59592
-RIM-COD-Creation-Time: 1333251257
-MIDlet-1: ,,
-RIM-COD-URL: AirCrew.cod
-RIM-COD-SHA1: f7 59 37 bc 99 c6 4f 8a a7 5e fa 44 14 37 bd 21 16 10 19 ec
-MicroEdition-Profile: MIDP-2.0
-MIDlet-Vendor: BlackBerry Developer
+RIM-COD-SHA1-9: a7 72 05 7d 0c a4 d9 97 e0 4c bc 53 51 e2 1f 6f 7a 39 7a 85
+RIM-COD-SHA1-8: 5a 7d b6 51 02 3b 51 ac 8a b9 61 55 1b a8 8a e2 ac d8 13 7d
+RIM-COD-SHA1-7: 21 3a df ab 8d 3c 8b 70 0d 2b ac b3 b6 86 80 b9 82 de 9a ee
+RIM-COD-URL-16: AirCrew-16.cod
+RIM-COD-Creation-Time: 1336414930
+RIM-COD-SHA1-6: 71 9b c1 bb ad 40 15 bd 08 82 c0 89 40 4f 4e 78 e1 d0 30 c8
+RIM-COD-URL-15: AirCrew-15.cod
+RIM-COD-SHA1-5: dc c0 6f af 12 00 90 8b 47 86 5e 56 ec f4 4f 61 66 80 9a dc

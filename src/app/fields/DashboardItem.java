@@ -9,8 +9,8 @@ import net.rim.device.api.ui.Keypad;
 
 public class DashboardItem extends Field{
 	
-	final static Bitmap grid_item_background = Bitmap.getBitmapResource("images/grid_item_background.png");
-	final static Bitmap grid_item_background_focus = Bitmap.getBitmapResource("images/grid_item_background_focus.png");
+	final static Bitmap grid_item_background = Bitmap.getBitmapResource("images/dashboard/grid_item_background.png");
+	final static Bitmap grid_item_background_focus = Bitmap.getBitmapResource("images/dashboard/grid_item_background_focus.png");
 	
 	final static int width = Display.getWidth()/3;
 	final static int height = (Display.getHeight()-50)/3;
@@ -42,10 +42,6 @@ public class DashboardItem extends Field{
 
 	protected void layout(int _width, int _height) {
 		setExtent(width, height);
-	}
-	
-	protected void paintBackground(Graphics _graphics){
-
 	}
 
 	protected void paint(Graphics _graphics) {
