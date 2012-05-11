@@ -1,14 +1,19 @@
 package app.screens;
 
 
+
+
+import net.rim.device.api.i18n.DateFormat;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.UiApplication;
+import net.rim.device.api.ui.component.DateField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import rubyx.custom_fields.CustomDateField;
 import rubyx.layout_managers.TableLayoutManager;
 import app.AirCrew;
 import app.fields.DashboardItem;
@@ -55,6 +60,11 @@ public class DashboardScreen extends MainScreen{
 			switch (index){
 			case 1:
 				airCrew.pushScreen(new SearchResultScreen());
+				break;
+			case 2:
+				MainScreen sa = new MainScreen(0);
+				sa.add(new CustomDateField("DATE", 0, DateField.DATE));
+				airCrew.pushScreen(sa);
 				break;
 			case 3:
 				airCrew.pushScreen(new BookmarksScreen());

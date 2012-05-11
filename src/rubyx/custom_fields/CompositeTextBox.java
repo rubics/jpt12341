@@ -33,7 +33,7 @@ public class CompositeTextBox extends Manager implements CompositeField{
 	
 	private static final int h_offset = 15;
 	private static final int v_offset = 7;
-	private static final int v_offset_correction = 5;
+	private static final int v_offset_correction = 0;
 	private static final int r_offset = 20;
 	private static final int b_offset =1;
 	
@@ -81,7 +81,7 @@ public class CompositeTextBox extends Manager implements CompositeField{
 		labelField = new LabelField(label);
 		labelField.setFont(font_composite_label);
 		
-		editField = new EditField(TextField.NO_NEWLINE  );
+		editField = new EditField(TextField.NO_NEWLINE | TextField.JUMP_FOCUS_AT_END );
 		editField.setNonSpellCheckable(true);
 		editField.setEditable(editable);
 		editField.setFont(font_composite_label);
