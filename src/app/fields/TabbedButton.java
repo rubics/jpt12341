@@ -91,8 +91,6 @@ public class TabbedButton extends Field {
 				graphics.setColor(Color.WHITE);
 				graphics.fillRect(H_OFFSET, V_OFFSET, getWidth()-2*H_OFFSET, getHeight()/2-V_OFFSET);
 		}
-//		if(isFocus())
-//			graphics.setColor(0x404040);
 		graphics.setGlobalAlpha(255);
 		graphics.drawText(label, (getWidth()-getFont().getAdvance(label))/2, (getHeight()-getFont().getHeight())/2);
 	}

@@ -14,6 +14,7 @@ public class RoundedBackgroundManager extends Manager implements CompositeField{
 	
 	protected static final int h_offset = 15;
 	protected static final int v_offset = 7;
+	protected static final int v_correction = 3;
 	protected static final int r_offset = 20;
 	protected static final int b_offset =1;
 	
@@ -22,7 +23,7 @@ public class RoundedBackgroundManager extends Manager implements CompositeField{
 	protected int field_width = xb - 2*h_offset;
 	protected int field_height = height - 2*v_offset;
 	
-	protected static final Font font_composite_label = Font.getDefault().derive(Font.PLAIN, 10, Ui.UNITS_px);
+	public static final Font font_composite_label = Font.getDefault().derive(Font.PLAIN, 20, Ui.UNITS_px);
 	protected int drawstyle = DRAWSTYLE_SINGLE;
 
 	protected RoundedBackgroundManager(long style, int width, int height){
@@ -60,7 +61,7 @@ public class RoundedBackgroundManager extends Manager implements CompositeField{
 			break;
 		}		
 		g.setFont(font_composite_label);
-		g.setColor(Color.GREEN);
+		g.setColor(Color.BLACK);
 		super.paint(g);
 	}
 

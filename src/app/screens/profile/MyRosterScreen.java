@@ -18,6 +18,8 @@ import net.rim.device.api.ui.decor.BackgroundFactory;
 import rubyx.custom_fields.CompositeFieldManager;
 import rubyx.custom_fields.CompositeTextBox;
 import rubyx.custom_fields.CustomDateField;
+import rubyx.custom_fields.RoundedBackgroundManager;
+import rubyx.custom_fields.SpaceField;
 import app.AirCrew;
 import app.fields.ScreenBannar;
 import app.fields.TabbedButton;
@@ -35,7 +37,7 @@ public class MyRosterScreen extends MainScreen{
 	private CompositeTextBox detailsField;
 	private CheckboxField allProfile;
 	private CheckboxField myFavorites;
-	
+	private TabbedButton saveButton;
 	private VerticalFieldManager mvrm;
 	
 	public MyRosterScreen(ProfileInfo _profileInfo){
@@ -68,20 +70,29 @@ public class MyRosterScreen extends MainScreen{
 		
 		allProfile = new CheckboxField("All Profiles", false, Field.FIELD_HCENTER){
 			protected void paint(Graphics g){
-				g.setColor(Color.WHITE);
+				g.setColor(Color.BLACK);
 				super.paint(g);
 			}
 		};
+		allProfile.setFont(RoundedBackgroundManager.font_composite_label);
 		myFavorites = new CheckboxField("My Favorites", false, Field.FIELD_HCENTER){
 			protected void paint(Graphics g){
-				g.setColor(Color.WHITE);
+				g.setColor(Color.BLACK);
 				super.paint(g);
 			}
 		};
-		checkboxManager.add(new LabelField("Who can view my roster ?"));
+		myFavorites.setFont(RoundedBackgroundManager.font_composite_label);
+		Field labelField = new LabelField("Who can view my roster ?");
+		labelField.setFont(RoundedBackgroundManager.font_composite_label);
+		checkboxManager.add(labelField);
 		checkboxManager.add(allProfile);
 		checkboxManager.add(myFavorites);
 		mvrm.add(checkboxManager);
+		
+		saveButton = new TabbedButton("Save", 7, 470, 40);
+		saveButton.setRVAlue(12);
+		mvrm.add(saveButton);
+		mvrm.add(new SpaceField(10));
 		
 		add(mvrm);
 	}

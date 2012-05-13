@@ -14,4 +14,8 @@ public class Images {
 		Bitmap.getBitmapResource("images/listing/iconCrew.png"),
 		Bitmap.getBitmapResource("images/listing/iconRecommendation.png")};
 	public static final String[] toolbox_names ={"Currency Converter", "Weather Forecast", "Satellite Map", "METAR & TAF", "Crew Discussion", "Recommend 4Aircrew"};
+	
+	public static final Bitmap nextProfile = Bitmap.getBitmapResource("images/favorites/nextProfile.png");
+	public static final Bitmap prevProfile = Bitmap.getBitmapResource("images/favorites/prevProfile.png");
+	public static final Bitmap avatar = Bitmap.getBitmapResource("images/favorites/avatar.png");
 }

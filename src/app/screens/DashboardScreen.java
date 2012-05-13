@@ -20,6 +20,7 @@ import app.fields.DashboardItem;
 import app.fields.ScreenTitle;
 import app.managers.profile.ProfileInfo;
 import app.screens.deals.SearchResultScreen;
+import app.screens.favorites.FavoritesScreen;
 
 public class DashboardScreen extends MainScreen{
 	

@@ -10,7 +10,7 @@ public class CheckboxManager extends RoundedBackgroundManager{
 	}
 	
 	protected void sublayout(int _width, int _height){
-		setPositionChild(getField(0),2*h_offset, v_offset);
+		setPositionChild(getField(0),2*h_offset, v_offset + v_correction);
 		setPositionChild(getField(1),2*h_offset, height/2);
 		setPositionChild(getField(2), width/2, height/2);
 		

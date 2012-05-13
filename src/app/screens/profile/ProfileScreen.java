@@ -69,6 +69,7 @@ public class ProfileScreen extends MainScreen{
 		
 		mvrm.add(manager);
 		saveButton = new TabbedButton("Save", 7, 470, 40);
+		saveButton.setRVAlue(12);
 		mvrm.add(saveButton);
 		mvrm.add(new SpaceField(10));
 		add(mvrm);
