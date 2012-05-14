@@ -18,4 +18,5 @@ public class Images {
 	public static final Bitmap nextProfile = Bitmap.getBitmapResource("images/favorites/nextProfile.png");
 	public static final Bitmap prevProfile = Bitmap.getBitmapResource("images/favorites/prevProfile.png");
 	public static final Bitmap avatar = Bitmap.getBitmapResource("images/favorites/avatar.png");
+	public static final Bitmap avatar_a = Bitmap.getBitmapResource("images/profile/gallery_1.png");
 }
