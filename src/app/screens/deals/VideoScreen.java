@@ -20,9 +20,6 @@ public class VideoScreen extends MainScreen{
 		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
 		setTitle(new ScreenTitle("Video"));
 		add(new LabelField("Video"));
-		add(new CustomRichTextField("Hello, lkdfjs dslkfjsd dkfj alowpl vnlkie cnkdfopwlv vcn wjdicn dslf dkfj aaxcc xcxkc oikz ,xcisix cwsdc k.x jq sk ois sjdilskd  ", 240));
-		
-		add(new CompositeObjectChoiceField("Airline", airlines,0));
 	}
 	
 	public boolean isDirty() {

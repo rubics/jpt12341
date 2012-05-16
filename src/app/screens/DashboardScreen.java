@@ -62,11 +62,6 @@ public class DashboardScreen extends MainScreen{
 			case 1:
 				airCrew.pushScreen(new SearchResultScreen());
 				break;
-			case 2:
-				MainScreen sa = new MainScreen(0);
-				sa.add(new CustomDateField("DATE", 0, DateField.DATE));
-				airCrew.pushScreen(sa);
-				break;
 			case 3:
 				airCrew.pushScreen(new BookmarksScreen());
 				break;

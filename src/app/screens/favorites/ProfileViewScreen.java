@@ -1,8 +1,14 @@
 package app.screens.favorites;
 
+
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.ui.Color;
+import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.Graphics;
 import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.component.ButtonField;
+import net.rim.device.api.ui.component.NullField;
+import net.rim.device.api.ui.component.TextField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
@@ -37,9 +43,19 @@ public class ProfileViewScreen extends MainScreen{
 		
 		profileView = new ProfileView(0,p_image);
 		vrm.add(profileView);
-		
 		vrm.add(new ProfileDetails());
-		vrm.add(new ButtonField("Button"));
+//		String str = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,";
+//		TextField field = new TextField(0){
+//			protected void paint(Graphics g){
+//				g.setColor(Color.WHITE);
+//				super.paint(g);
+//			}
+//		};
+//		field.setText(str);
+//		vrm.add(field);
+		vrm.add(new NullField());
+		
+		
 		add(vrm);
 	}
 	

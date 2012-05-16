@@ -12,8 +12,8 @@ import app.models.Profile;
 
 public class ProfileView extends Manager{
 	
-	protected static final int avatar_maxwidth = 240;
-	protected static final int avatar_maxheight = 240;
+	protected static final int avatar_maxwidth = 200;
+	protected static final int avatar_maxheight = 200;
 	
 	protected float resizedWidth;
 	protected float resizedHeight;
@@ -43,7 +43,7 @@ public class ProfileView extends Manager{
 		layoutChild(getField(1), (int)resizedWidth, (int)resizedHeight);
 		layoutChild(getField(2), 54, 78);
 		
-		setExtent(Display.getWidth(), _height);
+		setExtent(Display.getWidth(), avatar_maxheight);
 	}
 
 	public void dimensions(Bitmap _image){
