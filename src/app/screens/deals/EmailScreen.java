@@ -5,23 +5,22 @@ import net.rim.device.api.ui.component.NullField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import app.AirCrew;
 import app.fields.ScreenTitle;
 import app.fields.deals.CompositeDealLabel;
-import app.fields.deals.CustomTextArea;
 import app.fields.deals.ListItem;
-import app.managers.deals.DealsInfo;
+import app.managers.deals.DealsScreenManager;
+import app.models.Images;
 
 public class EmailScreen extends MainScreen{
-	private DealsInfo dealsInfo;
+	private DealsScreenManager dealsInfo;
 	
 	private Manager manager;
 	
-	public EmailScreen(DealsInfo _dealsInfo){
+	public EmailScreen(DealsScreenManager _dealsInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL);
 		dealsInfo = _dealsInfo;
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		setTitle(new ScreenTitle("Email"));
 		manager = new VerticalFieldManager(Manager.VERTICAL_SCROLL | Manager.VERTICAL_SCROLLBAR);
 		add(manager);

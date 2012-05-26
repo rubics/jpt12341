@@ -5,19 +5,16 @@ import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.Graphics;
 import net.rim.device.api.ui.Manager;
-import net.rim.device.api.ui.component.BitmapField;
 import net.rim.device.api.ui.component.GaugeField;
-import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import app.AirCrew;
 import app.fields.ScreenTitle;
 import app.fields.deals.ListItem;
-import app.fields.deals.TabbedPaneButton;
-import app.managers.deals.DealsInfo;
+import app.managers.deals.DealsScreenManager;
 import app.models.Deal;
+import app.models.Images;
 
 public class SearchResultScreen extends MainScreen{
 	
@@ -37,7 +34,7 @@ public class SearchResultScreen extends MainScreen{
 	
 	private FieldChangeListener listItemListener = new FieldChangeListener() {		
 		public void fieldChanged(Field field, int context) {
-			DealsInfo aboutDeals = new DealsInfo(((ListItem)field).deal);
+			DealsScreenManager aboutDeals = new DealsScreenManager(((ListItem)field).deal);
 			aboutDeals.pushScreen();			
 		}
 	};
@@ -47,7 +44,7 @@ public class SearchResultScreen extends MainScreen{
 	public SearchResultScreen(){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL);
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		setTitle(new ScreenTitle("Search Results"));
 		
 		VerticalFieldManager listManager = new VerticalFieldManager(Manager.VERTICAL_SCROLL | Manager.VERTICAL_SCROLLBAR);

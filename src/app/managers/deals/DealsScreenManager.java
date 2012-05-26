@@ -12,7 +12,7 @@ import app.screens.deals.EmailScreen;
 import app.screens.deals.LocationScreen;
 import app.screens.deals.VideoScreen;
 
-public class DealsInfo {
+public class DealsScreenManager {
 	
 	public Deal deal;
 	
@@ -24,7 +24,7 @@ public class DealsInfo {
 	private Field locationButton = new TabbedPaneButton("Location");
 	private Field bookmarkButton = new TabbedPaneButton("Bookmark");
 		
-	public DealsInfo(Deal _deal) {
+	public DealsScreenManager(Deal _deal) {
 		deal = _deal;
 		tabbedScreens[0] = new EmailScreen(this);
 		tabbedScreens[1] = new VideoScreen(this);

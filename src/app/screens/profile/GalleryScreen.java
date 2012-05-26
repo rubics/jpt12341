@@ -9,20 +9,18 @@ import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import rubyx.custom_fields.ScreenBannar;
 import rubyx.custom_fields.SpaceField;
 import rubyx.layout_managers.TableLayoutManager;
-import app.AirCrew;
-import app.fields.ScreenBannar;
-import app.fields.TabbedButton;
-import app.fields.TabbedButtonManager;
-import app.fields.profile.GalleryImageField;
+import rubyx.tabbedUI.TabbedButton;
 import app.fields.profile.GridImageField;
 import app.fields.profile.GridViewController;
-import app.managers.profile.ProfileInfo;
+import app.managers.profile.ProfileInfoScreenManager;
+import app.models.Images;
 
 public class GalleryScreen extends MainScreen{
 	
-	private ProfileInfo profileInfo;
+	private ProfileInfoScreenManager profileInfo;
 	private TabbedButton backButton;
 	private TabbedButton homeButton;
 	private VerticalFieldManager vrManager;
@@ -44,12 +42,12 @@ public class GalleryScreen extends MainScreen{
 			Bitmap.getBitmapResource("images/profile/gallery_2.png"),
 			Bitmap.getBitmapResource("images/profile/gallery_4.png"),
 			Bitmap.getBitmapResource("images/profile/gallery_1.png"),
-			Bitmap.getBitmapResource("images/profile/gallery_3.png")}; 
-	public GalleryScreen(ProfileInfo _profileInfo){
+			Bitmap.getBitmapResource("images/profile/gallery_5.png")}; 
+	public GalleryScreen(ProfileInfoScreenManager _profileInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		profileInfo = _profileInfo;
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		backButton = new TabbedButton("Back", 6, 100, 36);
 		backButton.setRVAlue(10);
 		homeButton = new TabbedButton("Home", 6, 100, 36);

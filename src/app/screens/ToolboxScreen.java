@@ -1,15 +1,15 @@
 package app.screens;
 
+import rubyx.custom_fields.ScreenBannar;
+import rubyx.tabbedUI.TabbedButton;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
 import app.AirCrew;
-import app.fields.Images;
-import app.fields.ScreenBannar;
-import app.fields.TabbedButton;
 import app.fields.listings.ListField;
+import app.models.Images;
 
 public class ToolboxScreen extends MainScreen{
 	
@@ -20,7 +20,7 @@ public class ToolboxScreen extends MainScreen{
 	public ToolboxScreen(){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		backButton = new TabbedButton("Back", 6, 100, 36);
 		backButton.setRVAlue(10);
 		homeButton = new TabbedButton("Home", 6, 100, 36);

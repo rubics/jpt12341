@@ -1,4 +1,4 @@
-package app.fields;
+package rubyx.tabbedUI;
 
 
 import net.rim.device.api.system.Bitmap;
@@ -17,6 +17,7 @@ public class TabbedButton extends Field {
 	public static final int DRAWSTYLE_SINGLE = 7;
 	private static final int FOREGROUND_COLOR = 0xF57000;
 	private static final int FOCUS_COLOR = 0x186DEF;
+	private static final int SELECTION_COLOR = 0x858585;
 	private static final int FONTSIZE_BIG = 10;
 	private static final int FONTSIZE_MEDIUM = 8;
 	private static final int FONTSIZE_SMALL = 6;
@@ -29,6 +30,7 @@ public class TabbedButton extends Field {
 	
 	String label;
 	boolean focusable=true;
+	private boolean isSelected = false;
 	private int drawStyle = DRAWSTYLE_SINGLE;
 	private int width;
 	private int height;
@@ -56,38 +58,40 @@ public class TabbedButton extends Field {
 
 	protected void paint(Graphics graphics) {
 		
-		if(isFocus())
-			graphics.setColor(FOCUS_COLOR);
-		else
-			graphics.setColor(FOREGROUND_COLOR);
-			
+		
+			if(isFocus())
+				graphics.setColor(FOCUS_COLOR);
+			else if(isSelected)
+				graphics.setColor(SELECTION_COLOR);
+			else
+				graphics.setColor(FOREGROUND_COLOR);
 		
 		switch (drawStyle){
 			case DRAWSTYLE_FIRST:
 				graphics.fillRoundRect(H_OFFSET, V_OFFSET, getWidth()-(H_OFFSET+B_OFFSET), getHeight()-2*V_OFFSET, R_VALUE, R_VALUE);
 				graphics.fillRect(getWidth()-H_FIRST, V_OFFSET, H_FIRST, getHeight()-2*V_OFFSET);
-				graphics.setGlobalAlpha(50);
+				graphics.setGlobalAlpha(40);
 				graphics.setColor(Color.WHITE);
 				graphics.fillRect(H_OFFSET, V_OFFSET, getWidth()-(H_OFFSET+B_OFFSET), (getHeight()-2*V_OFFSET)/2);
 				break;
 			case DRAWSTYLE_LAST:
 				graphics.fillRoundRect(B_OFFSET, V_OFFSET, getWidth()-(H_OFFSET+B_OFFSET), getHeight()-2*V_OFFSET, R_VALUE, R_VALUE);
 				graphics.fillRect(0, V_OFFSET, H_FIRST, getHeight()-2*V_OFFSET);
-				graphics.setGlobalAlpha(50);
+				graphics.setGlobalAlpha(40);
 				graphics.setColor(Color.WHITE);
 				graphics.fillRect(B_OFFSET, V_OFFSET, getWidth()-(H_OFFSET+B_OFFSET), (getHeight()-2*V_OFFSET)/2);
 				
 				break;
 			case DRAWSTYLE_MIDDLE:
 				graphics.fillRect(B_OFFSET, V_OFFSET, getWidth()-2*B_OFFSET, getHeight()-2*V_OFFSET);
-				graphics.setGlobalAlpha(50);
+				graphics.setGlobalAlpha(40);
 				graphics.setColor(Color.WHITE);
 				graphics.fillRect(B_OFFSET, V_OFFSET, getWidth()-2*B_OFFSET, (getHeight()-2*V_OFFSET)/2);
 				break;
 			case DRAWSTYLE_SINGLE:
 			default:
 				graphics.fillRoundRect(H_OFFSET, V_OFFSET, getWidth()-2*H_OFFSET, getHeight()-2*V_OFFSET,R_VALUE,R_VALUE);
-				graphics.setGlobalAlpha(50);
+				graphics.setGlobalAlpha(40);
 				graphics.setColor(Color.WHITE);
 				graphics.fillRect(H_OFFSET, V_OFFSET, getWidth()-2*H_OFFSET, getHeight()/2-V_OFFSET);
 		}
@@ -134,6 +138,12 @@ public class TabbedButton extends Field {
 	}
 	
 	protected void fieldChangeNotify(int context) {
+		if(TabbedButtonManager.class.isInstance(getManager()))
+			((TabbedButtonManager)getManager()).setSelection(getIndex());
 		super.fieldChangeNotify(context);
+	}
+	
+	public void setSelection(boolean selection){
+		isSelected = selection;
 	}
 }

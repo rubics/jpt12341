@@ -8,10 +8,10 @@ import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import app.AirCrew;
-import app.fields.ScreenBannar;
-import app.fields.TabbedButton;
+import rubyx.custom_fields.ScreenBannar;
+import rubyx.tabbedUI.TabbedButton;
 import app.fields.listings.ListingField;
+import app.models.Images;
 import app.screens.profile.GalleryScreen;
 
 public class FavoritesScreen extends MainScreen{
@@ -29,7 +29,7 @@ public class FavoritesScreen extends MainScreen{
 	public FavoritesScreen(){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		backButton = new TabbedButton("Back", 6, 100, 36);
 		backButton.setRVAlue(10);
 		homeButton = new TabbedButton("Home", 6, 100, 36);

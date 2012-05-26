@@ -11,7 +11,6 @@ import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.component.CheckboxField;
 import net.rim.device.api.ui.component.DateField;
 import net.rim.device.api.ui.component.LabelField;
-import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
@@ -19,15 +18,15 @@ import rubyx.custom_fields.CompositeFieldManager;
 import rubyx.custom_fields.CompositeTextBox;
 import rubyx.custom_fields.CustomDateField;
 import rubyx.custom_fields.RoundedBackgroundManager;
+import rubyx.custom_fields.ScreenBannar;
 import rubyx.custom_fields.SpaceField;
-import app.AirCrew;
-import app.fields.ScreenBannar;
-import app.fields.TabbedButton;
+import rubyx.tabbedUI.TabbedButton;
 import app.fields.profile.CheckboxManager;
-import app.managers.profile.ProfileInfo;
+import app.managers.profile.ProfileInfoScreenManager;
+import app.models.Images;
 
 public class MyRosterScreen extends MainScreen{
-	private ProfileInfo profileInfo;
+	private ProfileInfoScreenManager profileInfo;
 	private TabbedButton backButton;
 	private TabbedButton homeButton;
 	
@@ -40,11 +39,11 @@ public class MyRosterScreen extends MainScreen{
 	private TabbedButton saveButton;
 	private VerticalFieldManager mvrm;
 	
-	public MyRosterScreen(ProfileInfo _profileInfo){
+	public MyRosterScreen(ProfileInfoScreenManager _profileInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		profileInfo = _profileInfo;
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		
 		backButton = new TabbedButton("Back", 6, 100, 36);
 		backButton.setRVAlue(10);

@@ -1,6 +1,8 @@
 package app.screens.profile;
 
 import rubyx.custom_fields.SpaceField;
+import rubyx.tabbedUI.TabbedButton;
+import rubyx.tabbedUI.TabbedButtonManager;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.Field;
@@ -13,8 +15,6 @@ import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.PopupScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
-import app.fields.TabbedButton;
-import app.fields.TabbedButtonManager;
 
 public class PreviewPopup extends PopupScreen{
 	

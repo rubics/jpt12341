@@ -9,15 +9,13 @@ public class AirCrew extends UiApplication {
 	
 	private static AirCrew app;
 	
-	public static final Bitmap screen_background = Bitmap.getBitmapResource("images/screen_background.png");
-	
 	public static AirCrew createAirCrewInstance(){
 		if(app == null)
 			return new AirCrew();
 		else
 			return app;
 	}
-	
+
 	protected AirCrew(){
 		SigninScreen signinScreen = new SigninScreen();
 		pushScreen(signinScreen);

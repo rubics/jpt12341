@@ -10,10 +10,10 @@ import rubyx.custom_fields.CompositeObjectChoiceField;
 import rubyx.custom_fields.CompositePasswordBox;
 import rubyx.custom_fields.CompositeTextBox;
 import rubyx.custom_fields.SpaceField;
-import app.AirCrew;
+import rubyx.tabbedUI.TabbedButton;
+import rubyx.tabbedUI.TabbedButtonManager;
 import app.fields.ScreenTitle;
-import app.fields.TabbedButton;
-import app.fields.TabbedButtonManager;
+import app.models.Images;
 
 public class SignupScreen extends MainScreen{
 	
@@ -35,7 +35,7 @@ public class SignupScreen extends MainScreen{
 	public SignupScreen(long style){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_HORIZONTAL_SCROLLBAR);
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		setTitle(new ScreenTitle("Sign Up"));
 		
 		mvrm = new VerticalFieldManager(Manager.VERTICAL_SCROLL|Manager.VERTICAL_SCROLLBAR);

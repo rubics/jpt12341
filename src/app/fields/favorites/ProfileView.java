@@ -7,13 +7,13 @@ import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.component.BitmapField;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.VerticalFieldManager;
-import app.fields.Images;
+import app.models.Images;
 import app.models.Profile;
 
 public class ProfileView extends Manager{
 	
-	protected static final int avatar_maxwidth = 200;
-	protected static final int avatar_maxheight = 200;
+	protected static final int avatar_maxwidth = 180;
+	protected static final int avatar_maxheight = 180;
 	
 	protected float resizedWidth;
 	protected float resizedHeight;
@@ -26,7 +26,7 @@ public class ProfileView extends Manager{
 
 		dimensions(Images.avatar);
 //		resizedImage = new Bitmap((int)resizedWidth, (int)resizedHeight);
-		resizedImage = new Bitmap(200, 200);
+		resizedImage = new Bitmap(avatar_maxwidth, avatar_maxheight);
 		src_image.scaleInto(resizedImage, Bitmap.FILTER_BILINEAR);
 		
 		add(new BitmapField(Images.prevProfile));

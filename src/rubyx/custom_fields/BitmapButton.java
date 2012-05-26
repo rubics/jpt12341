@@ -1,4 +1,4 @@
-package app.fields;
+package rubyx.custom_fields;
 
 
 

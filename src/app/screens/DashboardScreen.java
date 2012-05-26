@@ -3,22 +3,21 @@ package app.screens;
 
 
 
-import net.rim.device.api.i18n.DateFormat;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.UiApplication;
-import net.rim.device.api.ui.component.DateField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import rubyx.custom_fields.CustomDateField;
 import rubyx.layout_managers.TableLayoutManager;
 import app.AirCrew;
 import app.fields.DashboardItem;
 import app.fields.ScreenTitle;
-import app.managers.profile.ProfileInfo;
+import app.managers.chat.ChatScreenManager;
+import app.managers.profile.ProfileInfoScreenManager;
+import app.models.Images;
 import app.screens.deals.SearchResultScreen;
 import app.screens.favorites.FavoritesScreen;
 
@@ -62,6 +61,10 @@ public class DashboardScreen extends MainScreen{
 			case 1:
 				airCrew.pushScreen(new SearchResultScreen());
 				break;
+			case 2:
+				ChatScreenManager chatScreenManager = new ChatScreenManager();
+				chatScreenManager.pushScreen();
+				break;
 			case 3:
 				airCrew.pushScreen(new BookmarksScreen());
 				break;
@@ -69,7 +72,7 @@ public class DashboardScreen extends MainScreen{
 				airCrew.pushScreen(new FavoritesScreen());
 				break;
 			case 5:
-				ProfileInfo profileInfo = new ProfileInfo();
+				ProfileInfoScreenManager profileInfo = new ProfileInfoScreenManager();
 				profileInfo.pushScreen();
 				break;
 			case 7:
@@ -91,7 +94,7 @@ public class DashboardScreen extends MainScreen{
 	private DashboardScreen(){
 		super(Manager.USE_ALL_HEIGHT);
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		setTitle(new ScreenTitle("Dashboard"));
 		
 		TableLayoutManager layoutManager = new TableLayoutManager(column_styles, column_widths, horizontal_padding, 0) ;

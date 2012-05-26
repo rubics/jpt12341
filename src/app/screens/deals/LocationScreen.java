@@ -4,17 +4,17 @@ import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import app.AirCrew;
 import app.fields.ScreenTitle;
-import app.managers.deals.DealsInfo;
+import app.managers.deals.DealsScreenManager;
+import app.models.Images;
 
 public class LocationScreen extends MainScreen{
-	private DealsInfo dealsInfo;
-	public LocationScreen(DealsInfo _dealsInfo){
+	private DealsScreenManager dealsInfo;
+	public LocationScreen(DealsScreenManager _dealsInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		dealsInfo = _dealsInfo;
 		Manager mainManager = getMainManager();
-		mainManager.setBackground(BackgroundFactory.createBitmapBackground(AirCrew.screen_background));
+		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		setTitle(new ScreenTitle("Location"));
 		add(new LabelField("Location"));
 	}
