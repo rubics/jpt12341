@@ -63,4 +63,10 @@ public class TabbedButtonManager extends HorizontalFieldManager {
 	public int getSelction(){
 		return selectedIndex;
 	}
+	
+	public void setColorScheme(int foreground, int focus, int selection, int font){
+		for(int i=0; i<getFieldCount(); i++){
+			((TabbedButton)getField(i)).setColorScheme(foreground, focus, selection, font);
+		}
+	}
 }

@@ -32,13 +32,13 @@ public class CompositeTextBox extends Manager implements CompositeField{
 	
 	
 	private static final int h_offset = 15;
-	private static final int v_offset = 7;
+	private static final int v_offset = 4;
 	private static final int v_offset_correction = 0;
 	private static final int r_offset = 20;
 	private static final int b_offset =1;
 	
 	private int xb = width/2;
-	private static final int y = 2*v_offset + v_offset_correction;
+	private int y = 2*v_offset + v_offset_correction;
 	private int field_width = xb - 2*h_offset;
 	private int field_height = height - 2*v_offset;
 	
@@ -103,14 +103,14 @@ public class CompositeTextBox extends Manager implements CompositeField{
 		add(hrManager);		
 	}
 	
-		protected void sublayout(int _width, int _height){
+	protected void sublayout(int _width, int _height){
 		
 		
 		layoutChild(getField(0), field_width, field_height);
 		layoutChild(getField(1), field_width, field_height);
 		
-		setPositionChild(getField(0), 2*h_offset, y);
-		setPositionChild(getField(1),width/2, y);
+		setPositionChild(getField(0), 2*h_offset, (height - field_height)/2);
+		setPositionChild(getField(1),width/2, (height - field_height)/2);
 		
 		setExtent(width, height);
 		
@@ -190,9 +190,6 @@ public class CompositeTextBox extends Manager implements CompositeField{
 	public void setEditable(boolean editable){
 		editField.setEditable(editable);
 	}
-	
-	
-
 	
 	//============================================================================================//
 	

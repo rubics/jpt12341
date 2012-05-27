@@ -15,9 +15,10 @@ public class TabbedButton extends Field {
 	public static final int DRAWSTYLE_MIDDLE = 3;
 	public static final int DRAWSTYLE_LAST = 5;
 	public static final int DRAWSTYLE_SINGLE = 7;
-	private static final int FOREGROUND_COLOR = 0xF57000;
-	private static final int FOCUS_COLOR = 0x186DEF;
-	private static final int SELECTION_COLOR = 0x858585;
+	private int FOREGROUND_COLOR = 0xF57000;
+	private int FOCUS_COLOR = 0x186DEF;
+	private int SELECTION_COLOR = 0x858585;
+	private int FONT_COLOR = Color.WHITE;
 	private static final int FONTSIZE_BIG = 10;
 	private static final int FONTSIZE_MEDIUM = 8;
 	private static final int FONTSIZE_SMALL = 6;
@@ -96,6 +97,7 @@ public class TabbedButton extends Field {
 				graphics.fillRect(H_OFFSET, V_OFFSET, getWidth()-2*H_OFFSET, getHeight()/2-V_OFFSET);
 		}
 		graphics.setGlobalAlpha(255);
+		graphics.setColor(FONT_COLOR);
 		graphics.drawText(label, (getWidth()-getFont().getAdvance(label))/2, (getHeight()-getFont().getHeight())/2);
 	}
 	
@@ -145,5 +147,13 @@ public class TabbedButton extends Field {
 	
 	public void setSelection(boolean selection){
 		isSelected = selection;
+	}
+	
+	public void setColorScheme(int foreground, int focus, int selection, int font){
+		FOREGROUND_COLOR = foreground;
+		FOCUS_COLOR = focus;
+		SELECTION_COLOR = selection;
+		FONT_COLOR = font;
+		invalidate();
 	}
 }
