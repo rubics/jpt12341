@@ -1,6 +1,7 @@
 package app.screens.deals;
 
 import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.Graphics;
@@ -10,13 +11,19 @@ import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
-import app.fields.ScreenTitle;
-import app.fields.deals.ListItem;
-import app.managers.deals.DealsScreenManager;
+import rubyx.custom_fields.ScreenBannar;
+import rubyx.custom_fields.SpaceField;
+import rubyx.tabbedUI.TabbedButton;
+import rubyx.tabbedUI.TabbedButtonManager;
+import app.fields.listings.ListingField;
+import app.managers.deals.AboutDealScreenManager;
 import app.models.Deal;
 import app.models.Images;
 
 public class SearchResultScreen extends MainScreen{
+	
+	private TabbedButton backButton;
+	private TabbedButton homeButton;
 	
 	public static Bitmap[] profile_pics = {Bitmap.getBitmapResource("images/profile_1.png"),
 			Bitmap.getBitmapResource("images/profile_2.png"),
@@ -34,28 +41,40 @@ public class SearchResultScreen extends MainScreen{
 	
 	private FieldChangeListener listItemListener = new FieldChangeListener() {		
 		public void fieldChanged(Field field, int context) {
-			DealsScreenManager aboutDeals = new DealsScreenManager(((ListItem)field).deal);
+			int in = (field.getIndex()-3) % 4;
+			AboutDealScreenManager aboutDeals = new AboutDealScreenManager(new Deal(names[in], category[in], description[in], profile_pics[in]));
 			aboutDeals.pushScreen();			
 		}
 	};
-	
-	
-	
+		
 	public SearchResultScreen(){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL);
 		Manager mainManager = getMainManager();
 		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
-		setTitle(new ScreenTitle("Search Results"));
+		
+		backButton = new TabbedButton("Back", 6, 100, 36);
+		backButton.setRVAlue(10);
+		homeButton = new TabbedButton("Home", 6, 100, 36);
+		homeButton.setRVAlue(10);
+		
+		setTitle(new ScreenBannar("Deals", 40, backButton, homeButton));
 		
 		VerticalFieldManager listManager = new VerticalFieldManager(Manager.VERTICAL_SCROLL | Manager.VERTICAL_SCROLLBAR);
 		
+		listManager.add(new SpaceField(5));
+		TabbedButtonManager tbManager = new TabbedButtonManager(Display.getWidth(), 44);
+		tbManager.add(new TabbedButton("List View", 6));
+		tbManager.add(new TabbedButton("Map View", 6));
+		listManager.add(tbManager);
+		listManager.add(new SpaceField(5));
+		
 		for(int i=0; i < profile_pics.length; i++){
-			Field listItem = new ListItem(new Deal(names[i], category[i], description[i], profile_pics[i]), true);
+			Field listItem = new ListingField(profile_pics[i], names[i], category[i],8);
 			listItem.setChangeListener(listItemListener);
 			listManager.add(listItem);
 		}
 		for(int i=0; i < profile_pics.length; i++){
-			Field listItem = new ListItem(new Deal(names[i], category[i], description[i], profile_pics[i]), true);
+			Field listItem = new ListingField(profile_pics[i], names[i], category[i],8);
 			listItem.setChangeListener(listItemListener);
 			listManager.add(listItem);
 		}

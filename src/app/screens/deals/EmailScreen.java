@@ -8,15 +8,15 @@ import net.rim.device.api.ui.decor.BackgroundFactory;
 import app.fields.ScreenTitle;
 import app.fields.deals.CompositeDealLabel;
 import app.fields.deals.ListItem;
-import app.managers.deals.DealsScreenManager;
+import app.managers.deals.AboutDealScreenManager;
 import app.models.Images;
 
 public class EmailScreen extends MainScreen{
-	private DealsScreenManager dealsInfo;
+	private AboutDealScreenManager dealsInfo;
 	
 	private Manager manager;
 	
-	public EmailScreen(DealsScreenManager _dealsInfo){
+	public EmailScreen(AboutDealScreenManager _dealsInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL);
 		dealsInfo = _dealsInfo;
 		Manager mainManager = getMainManager();

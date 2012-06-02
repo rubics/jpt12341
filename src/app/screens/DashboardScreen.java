@@ -16,6 +16,7 @@ import app.AirCrew;
 import app.fields.DashboardItem;
 import app.fields.ScreenTitle;
 import app.managers.chat.ChatScreenManager;
+import app.managers.deals.DealsScreenManager;
 import app.managers.profile.ProfileInfoScreenManager;
 import app.models.Images;
 import app.screens.deals.SearchResultScreen;
@@ -59,7 +60,8 @@ public class DashboardScreen extends MainScreen{
 			
 			switch (index){
 			case 1:
-				airCrew.pushScreen(new SearchResultScreen());
+				DealsScreenManager dealsScreenManger = new DealsScreenManager();
+				dealsScreenManger.pushScreen();
 				break;
 			case 2:
 				ChatScreenManager chatScreenManager = new ChatScreenManager();

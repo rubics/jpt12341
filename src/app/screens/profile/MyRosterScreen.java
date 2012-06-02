@@ -14,6 +14,7 @@ import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import rubyx.custom_fields.CompositeButton;
 import rubyx.custom_fields.CompositeFieldManager;
 import rubyx.custom_fields.CompositeTextBox;
 import rubyx.custom_fields.CustomDateField;
@@ -30,10 +31,10 @@ public class MyRosterScreen extends MainScreen{
 	private TabbedButton backButton;
 	private TabbedButton homeButton;
 	
-	private CompositeTextBox locationField;
+	private CompositeButton locationField;
 	private CustomDateField dateFrom;
 	private CustomDateField dateTo;
-	private CompositeTextBox detailsField;
+	private CompositeButton detailsField;
 	private CheckboxField allProfile;
 	private CheckboxField myFavorites;
 	private TabbedButton saveButton;
@@ -52,10 +53,10 @@ public class MyRosterScreen extends MainScreen{
 		
 		setTitle(new ScreenBannar("My Roster", 40, backButton, homeButton));
 		mvrm = new VerticalFieldManager(Manager.VERTICAL_SCROLL|Manager.VERTICAL_SCROLLBAR);
-		locationField = new CompositeTextBox("Location", "", true);
+		locationField = new CompositeButton("Location");
 		dateFrom = new CustomDateField("Date From", System.currentTimeMillis(), DateField.DATE);
 		dateTo = new CustomDateField("Date To", System.currentTimeMillis(), DateField.DATE);
-		detailsField = new CompositeTextBox("Details", "", true);
+		detailsField = new CompositeButton("Details");
 		
 		CompositeFieldManager manager = new CompositeFieldManager(Manager.VERTICAL_SCROLL | Manager.VERTICAL_SCROLLBAR);
 		

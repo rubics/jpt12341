@@ -76,7 +76,7 @@ public class FilterScreen extends MainScreen{
 		vrManager.add(city);
 		vrManager.add(new SpaceField(3));
 	
-		TabbedButton filterButton = new TabbedButton("Filter", 7, 470, 40);
+		TabbedButton filterButton = new TabbedButton("Filter", 7, 480, 40);
 		filterButton.setRVAlue(12);
 		vrManager.add(filterButton);
 		vrManager.add(new SpaceField(3));

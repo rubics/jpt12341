@@ -5,12 +5,12 @@ import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.decor.BackgroundFactory;
 import app.fields.ScreenTitle;
-import app.managers.deals.DealsScreenManager;
+import app.managers.deals.AboutDealScreenManager;
 import app.models.Images;
 
 public class LocationScreen extends MainScreen{
-	private DealsScreenManager dealsInfo;
-	public LocationScreen(DealsScreenManager _dealsInfo){
+	private AboutDealScreenManager dealsInfo;
+	public LocationScreen(AboutDealScreenManager _dealsInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		dealsInfo = _dealsInfo;
 		Manager mainManager = getMainManager();

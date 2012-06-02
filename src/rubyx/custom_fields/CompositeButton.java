@@ -25,7 +25,7 @@ public class CompositeButton extends Field implements CompositeField {
 	public int color_font = Color.BLACK;
 	
 	
-	private static final int h_offset = 10;
+	private static final int h_offset = 15;
 	private static final int v_offset = 4;
 	private static final int v_offset_correction = 0;
 	private static final int r_offset = 20;

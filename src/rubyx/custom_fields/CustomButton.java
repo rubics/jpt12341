@@ -33,7 +33,7 @@ public class CustomButton extends Field {
 	}
 
 	protected void paint(Graphics graphics) {
-		graphics.setColor(Color.BLACK);
+		graphics.setColor(0x444444);
 		
 		graphics.fillRect(0, 0, getWidth(), getHeight());
 		
@@ -44,10 +44,10 @@ public class CustomButton extends Field {
 		
 		
 		graphics.fillRoundRect(0, 0, getWidth(), getHeight(),7,7);
-//		graphics.setGlobalAlpha(70);
-//		graphics.setColor(Color.WHITE);
-//		graphics.fillRect(0, 0, getWidth(), getHeight()/2);
-//		graphics.setGlobalAlpha(255);
+		graphics.setGlobalAlpha(30);
+		graphics.setColor(Color.WHITE);
+		graphics.fillRect(0, 0, getWidth(), getHeight()/2);
+		graphics.setGlobalAlpha(255);
 		graphics.drawBitmap(xa, ya, icon.getWidth(), icon.getHeight(), icon, 0, 0);
 		
 	}

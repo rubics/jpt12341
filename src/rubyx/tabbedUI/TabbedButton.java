@@ -23,7 +23,7 @@ public class TabbedButton extends Field {
 	private static final int FONTSIZE_MEDIUM = 8;
 	private static final int FONTSIZE_SMALL = 6;
 	
-	private static final int H_OFFSET = 10;
+	private static final int H_OFFSET = 15;
 	private static final int B_OFFSET = 1;
 	private static final int V_OFFSET = 3;
 	private int R_VALUE = 20;

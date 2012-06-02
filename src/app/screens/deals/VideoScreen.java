@@ -5,13 +5,13 @@ import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.decor.BackgroundFactory;
 import app.fields.ScreenTitle;
-import app.managers.deals.DealsScreenManager;
+import app.managers.deals.AboutDealScreenManager;
 import app.models.Images;
 
 public class VideoScreen extends MainScreen{
-	private DealsScreenManager dealsInfo;
+	private AboutDealScreenManager dealsInfo;
 	String [] airlines = {"Indian", "Air Deccan", "KingFisher", "Necon"};
-	public VideoScreen(DealsScreenManager _dealsInfo){
+	public VideoScreen(AboutDealScreenManager _dealsInfo){
 		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		dealsInfo = _dealsInfo;
 		Manager mainManager = getMainManager();

@@ -1,45 +1,43 @@
 package app.managers.deals;
 
+import net.rim.device.api.system.Bitmap;
+import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.Field;
 import net.rim.device.api.ui.Manager;
+import net.rim.device.api.ui.container.HorizontalFieldManager;
 import net.rim.device.api.ui.container.MainScreen;
+import rubyx.custom_fields.CustomButton;
 import rubyx.tabbedUI.TabbedScreenManager;
-import app.fields.deals.TabbedPaneButton;
-import app.fields.deals.TabbedPaneManager;
-import app.models.Deal;
-import app.screens.deals.BookmarkScreen;
-import app.screens.deals.EmailScreen;
-import app.screens.deals.LocationScreen;
-import app.screens.deals.VideoScreen;
+import app.models.Images;
+import app.screens.chat.ChatScreen;
+import app.screens.chat.FilterScreen;
+import app.screens.chat.HistoryScreen;
+import app.screens.chat.NearMeScreen;
+import app.screens.deals.SearchResultScreen;
 
 public class DealsScreenManager {
-	
-	public Deal deal;
+	private Bitmap[] images = Images.chatScreenIcons;
 	
 	private TabbedScreenManager tabbedScreenManager;	
-	private MainScreen[] tabbedScreens = new MainScreen[4];	
-	private Manager tabbedPaneManager = new TabbedPaneManager(Manager.USE_ALL_WIDTH);
-	private Field emailButton = new TabbedPaneButton("Email");
-	private Field videoButton =	new TabbedPaneButton("Video");
-	private Field locationButton = new TabbedPaneButton("Location");
-	private Field bookmarkButton = new TabbedPaneButton("Bookmark");
-		
-	public DealsScreenManager(Deal _deal) {
-		deal = _deal;
-		tabbedScreens[0] = new EmailScreen(this);
-		tabbedScreens[1] = new VideoScreen(this);
-		tabbedScreens[2] = new LocationScreen(this);
-		tabbedScreens[3] = new BookmarkScreen(this);
-		
-		tabbedPaneManager.add(emailButton);
-		tabbedPaneManager.add(videoButton);
-		tabbedPaneManager.add(locationButton);
-		tabbedPaneManager.add(bookmarkButton);
-				
-		tabbedScreenManager = new TabbedScreenManager(tabbedScreens, tabbedPaneManager);
-		
-	}
+	private MainScreen[] tabbedScreens = new MainScreen[4];
+	private Field[] tabbedButtons = new Field[4];
+	private Manager tabbedButtonManager;
 	
+	public DealsScreenManager(){
+		
+		tabbedScreens[0]= new SearchResultScreen();
+		tabbedScreens[1] = new FilterScreen();
+
+		
+		tabbedButtonManager = new HorizontalFieldManager();
+		
+		for(int i=0; i<2; i++){
+			tabbedButtons[i] = new CustomButton(images[i], Display.getWidth()/2, 50);
+			tabbedButtonManager.add(tabbedButtons[i]);
+		}
+		
+		tabbedScreenManager = new TabbedScreenManager(tabbedScreens, tabbedButtonManager);
+	}
 	public void pushScreen(){
 		if(tabbedScreenManager != null)
 			tabbedScreenManager.pushScreen();
