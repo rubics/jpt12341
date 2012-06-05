@@ -1,5 +1,6 @@
 package app.fields.deals;
 
+import rubyx.custom_fields.CustomTextArea;
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.ui.Color;
 import net.rim.device.api.ui.Field;

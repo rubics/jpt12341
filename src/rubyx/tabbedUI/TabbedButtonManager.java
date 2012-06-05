@@ -1,6 +1,7 @@
 package rubyx.tabbedUI;
 
 import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.container.HorizontalFieldManager;
 
 public class TabbedButtonManager extends HorizontalFieldManager {
@@ -10,16 +11,19 @@ public class TabbedButtonManager extends HorizontalFieldManager {
 	private boolean selectable = false;
 	private int selectedIndex = 0;
 	
+	private FieldChangeListener listener;
+	
 	public TabbedButtonManager(int _width, int _height){
 		super(Field.FIELD_HCENTER);
 		width = _width;
 		height = _height;
 	}
 	
-	public TabbedButtonManager(int _width, int _height, boolean _selectable, int _selectedIndex){
+	public TabbedButtonManager(int _width, int _height, boolean _selectable, int _selectedIndex, FieldChangeListener _listener){
 		this(_width, _height);
 		selectable = _selectable;
 		selectedIndex = _selectedIndex;
+		listener = _listener;
 	}
 	
 	protected void sublayout(int _width, int _height){
@@ -42,8 +46,10 @@ public class TabbedButtonManager extends HorizontalFieldManager {
 
 		int w = width/fieldcount;
 		for(int i=0; i<fieldcount; i++){
-			setPositionChild(getField(i), i*w, 0);
-			layoutChild(getField(i), w, height);
+			Field field = getField(i);
+			field.setChangeListener(listener);
+			setPositionChild(field, i*w, 0);
+			layoutChild(field, w, height);
 		}
 		setSelection(selectedIndex);
 		setExtent(width, height);

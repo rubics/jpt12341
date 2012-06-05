@@ -25,7 +25,6 @@ public class AirCrew extends UiApplication {
 	}
 	
 	public static void main(String [] args){
-		
 		AirCrew app = AirCrew.createAirCrewInstance();
 		app.enterEventDispatcher();
 	}

@@ -16,7 +16,7 @@ import app.screens.chat.NearMeScreen;
 import app.screens.deals.SearchResultScreen;
 
 public class DealsScreenManager {
-	private Bitmap[] images = Images.chatScreenIcons;
+	private Bitmap[] images = Images.deals_tabbed_button;
 	
 	private TabbedScreenManager tabbedScreenManager;	
 	private MainScreen[] tabbedScreens = new MainScreen[4];

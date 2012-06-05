@@ -26,4 +26,13 @@ public class Images {
 		Bitmap.getBitmapResource("images/chat/history.png")};
 	
 	public static final Bitmap screen_background = Bitmap.getBitmapResource("images/screen_background.png");
+	
+	public static final Bitmap[] deals_tabbed_button = {Bitmap.getBitmapResource("images/deals/nearme.png"),
+		Bitmap.getBitmapResource("images/deals/filter.png")};
+	
+	public static final Bitmap[] profile_pics = {Bitmap.getBitmapResource("images/profile_1.png"),
+		Bitmap.getBitmapResource("images/profile_2.png"),
+		Bitmap.getBitmapResource("images/profile_3.png"),
+		Bitmap.getBitmapResource("images/profile_4.png")
+	};
 }

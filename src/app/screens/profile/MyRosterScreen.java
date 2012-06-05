@@ -1,8 +1,5 @@
 package app.screens.profile;
 
-
-
-
 import net.rim.device.api.system.Display;
 import net.rim.device.api.ui.Color;
 import net.rim.device.api.ui.Field;
@@ -14,6 +11,7 @@ import net.rim.device.api.ui.component.LabelField;
 import net.rim.device.api.ui.container.MainScreen;
 import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import rubyx.custom_fields.CheckboxManager;
 import rubyx.custom_fields.CompositeButton;
 import rubyx.custom_fields.CompositeFieldManager;
 import rubyx.custom_fields.CompositeTextBox;
@@ -22,7 +20,6 @@ import rubyx.custom_fields.RoundedBackgroundManager;
 import rubyx.custom_fields.ScreenBannar;
 import rubyx.custom_fields.SpaceField;
 import rubyx.tabbedUI.TabbedButton;
-import app.fields.profile.CheckboxManager;
 import app.managers.profile.ProfileInfoScreenManager;
 import app.models.Images;
 

@@ -15,7 +15,7 @@
 		<copyright >
 			Copyright (c) 2012 BlackBerry Developer
 		</copyright>
-		<fileset Java="1.49" _blackberryVersion="[5.0.0,5.0.1)">
+		<fileset Java="1.54" _blackberryVersion="[5.0.0,5.0.1)">
 			<directory >
 				5.0.0
 			</directory>
@@ -25,7 +25,7 @@
 			</files>
 
 		</fileset>
-		<fileset Java="1.49" _blackberryVersion="[6.0.0)">
+		<fileset Java="1.54" _blackberryVersion="[6.0.0)">
 			<directory >
 				6.0.0
 			</directory>

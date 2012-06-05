@@ -34,7 +34,7 @@ public class FilterScreen extends MainScreen{
 		
 		vrManager = new VerticalFieldManager(Manager.VERTICAL_SCROLL | Manager.VERTICAL_SCROLLBAR);
 		
-		TabbedButtonManager statusButtonGroup = new TabbedButtonManager(480, 42, true, 2);
+		TabbedButtonManager statusButtonGroup = new TabbedButtonManager(480, 42, true, 2, null);
 		statusButtonGroup.add(new TabbedButton("Online",6));
 		statusButtonGroup.add(new TabbedButton("Offline",6));
 		statusButtonGroup.add(new TabbedButton("List All",6));
@@ -43,7 +43,7 @@ public class FilterScreen extends MainScreen{
 		vrManager.add(statusButtonGroup);
 		vrManager.add(new SpaceField(3));
 		
-		TabbedButtonManager genderButtonGroup = new TabbedButtonManager(480, 42, true, 2);
+		TabbedButtonManager genderButtonGroup = new TabbedButtonManager(480, 42, true, 2, null);
 		genderButtonGroup.add(new TabbedButton("Male",6));
 		genderButtonGroup.add(new TabbedButton("Female",6));
 		genderButtonGroup.add(new TabbedButton("List All",6));
@@ -52,7 +52,7 @@ public class FilterScreen extends MainScreen{
 		vrManager.add(genderButtonGroup);
 		vrManager.add(new SpaceField(3));
 		
-		TabbedButtonManager crewButtonGroup = new TabbedButtonManager(480, 42, true, 2);
+		TabbedButtonManager crewButtonGroup = new TabbedButtonManager(480, 42, true, 2, null);
 		crewButtonGroup.add(new TabbedButton("Cabin Crew",6));
 		crewButtonGroup.add(new TabbedButton("Flight Crew",6));
 		crewButtonGroup.add(new TabbedButton("List All",6));

@@ -43,7 +43,7 @@ public class CustomButton extends Field {
 			graphics.setColor(Color.BLACK);
 		
 		
-		graphics.fillRoundRect(0, 0, getWidth(), getHeight(),7,7);
+		graphics.fillRect(0, 0, getWidth(), getHeight());
 		graphics.setGlobalAlpha(30);
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(0, 0, getWidth(), getHeight()/2);

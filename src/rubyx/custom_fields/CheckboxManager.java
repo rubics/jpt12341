@@ -1,7 +1,6 @@
-package app.fields.profile;
+package rubyx.custom_fields;
 
 import net.rim.device.api.system.Display;
-import rubyx.custom_fields.RoundedBackgroundManager;
 
 public class CheckboxManager extends RoundedBackgroundManager{
 

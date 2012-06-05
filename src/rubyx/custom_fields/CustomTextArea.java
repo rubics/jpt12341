@@ -1,4 +1,4 @@
-package app.fields.deals;
+package rubyx.custom_fields;
 
 import java.util.Vector;
 

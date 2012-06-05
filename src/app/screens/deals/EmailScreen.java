@@ -1,5 +1,6 @@
 package app.screens.deals;
 
+import rubyx.custom_fields.ListItem;
 import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.component.NullField;
 import net.rim.device.api.ui.container.MainScreen;
@@ -7,7 +8,6 @@ import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
 import app.fields.ScreenTitle;
 import app.fields.deals.CompositeDealLabel;
-import app.fields.deals.ListItem;
 import app.managers.deals.AboutDealScreenManager;
 import app.models.Images;
 

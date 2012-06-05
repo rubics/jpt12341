@@ -1,4 +1,4 @@
-package app.fields.deals;
+package rubyx.tabbedUI;
 
 import net.rim.device.api.system.Bitmap;
 import net.rim.device.api.system.Display;

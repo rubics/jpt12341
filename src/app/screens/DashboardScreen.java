@@ -10,8 +10,11 @@ import net.rim.device.api.ui.FieldChangeListener;
 import net.rim.device.api.ui.Manager;
 import net.rim.device.api.ui.UiApplication;
 import net.rim.device.api.ui.container.MainScreen;
+import net.rim.device.api.ui.container.VerticalFieldManager;
 import net.rim.device.api.ui.decor.BackgroundFactory;
+import rubyx.custom_fields.SpaceField;
 import rubyx.layout_managers.TableLayoutManager;
+import rubyx.tabbedUI.TabbedButton;
 import app.AirCrew;
 import app.fields.DashboardItem;
 import app.fields.ScreenTitle;
@@ -19,7 +22,6 @@ import app.managers.chat.ChatScreenManager;
 import app.managers.deals.DealsScreenManager;
 import app.managers.profile.ProfileInfoScreenManager;
 import app.models.Images;
-import app.screens.deals.SearchResultScreen;
 import app.screens.favorites.FavoritesScreen;
 
 public class DashboardScreen extends MainScreen{
@@ -94,11 +96,11 @@ public class DashboardScreen extends MainScreen{
 	}
 	
 	private DashboardScreen(){
-		super(Manager.USE_ALL_HEIGHT);
+		super(Manager.USE_ALL_HEIGHT | Manager.NO_VERTICAL_SCROLL | Manager.NO_VERTICAL_SCROLLBAR);
 		Manager mainManager = getMainManager();
 		mainManager.setBackground(BackgroundFactory.createBitmapBackground(Images.screen_background));
 		setTitle(new ScreenTitle("Dashboard"));
-		
+		VerticalFieldManager mvrm = new VerticalFieldManager(Manager.VERTICAL_SCROLL|Manager.VERTICAL_SCROLLBAR);
 		TableLayoutManager layoutManager = new TableLayoutManager(column_styles, column_widths, horizontal_padding, 0) ;
 		
 		for(int i=0; i<9; i++){
@@ -108,21 +110,14 @@ public class DashboardScreen extends MainScreen{
 			layoutManager.add(dashboardItem);
 		}
 		
-		add(layoutManager);
+		mvrm.add(layoutManager);
+		mvrm.add(new SpaceField(5));
+		mvrm.add(new TabbedButton("Log Out", 7, Display.getWidth()-10, 46));
+		mvrm.add(new SpaceField(5));
+		add(mvrm);
 	}
 	
 	public boolean isDirty() {
 	    return false;
 	}
 }
-
-//class BackgroundImageManager extends HorizontalFieldManager{
-//	public BackgroundImageManager(){
-//		super(HorizontalFieldManager.USE_ALL_WIDTH | HorizontalFieldManager.USE_ALL_HEIGHT);
-//	}
-//	protected void paint(Graphics g){
-//		g.drawBitmap(0, 0, Display.getWidth(), Display.getHeight(), AirCrew.splash_image, 0, 0);
-//		super.paint(g);
-//	}
-//	
-//}
